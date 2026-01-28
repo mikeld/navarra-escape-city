@@ -1,0 +1,7 @@
+{
+    "name": "Navarra Escape City: Portal de Escape City en Navarra",
+    "description": "Una experiencia de escape room en Navarra, centrada en la leyenda del Palacio Real y las láminas de cobre.",
+    "requestFramePermissions": [
+        "geolocation"
+    ]
+}

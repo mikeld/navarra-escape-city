@@ -1,0 +1,90 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function signedIn() { 
+      return request.auth != null; 
+    }
+    
+    function isMe(uid) { 
+      return signedIn() && request.auth.uid == uid; 
+    }
+    
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'mikeldiaz0@gmail.com';
+    }
+    
+    // Perfil de Usuario y sus subcolecciones
+    match /users/{userId} {
+      // Usuario puede leer/escribir sus propios datos, admin puede leer todo
+      allow read: if isMe(userId) || isAdmin();
+      allow write: if isMe(userId);
+      
+      // Permitir acceso recursivo a subcolecciones (gameProgress, enigmasCompleted)
+      match /{document=**} {
+        allow read: if isMe(userId) || isAdmin();
+        allow write: if isMe(userId);
+      }
+    }
+    
+    // Newsletter - Cualquiera puede crear, solo admin puede leer
+    match /newsletter/{emailId} {
+      allow create: if true;
+      allow read: if isAdmin(); // ← NUEVO: Admin puede ver suscriptores
+      allow update, delete: if isAdmin(); // ← NUEVO: Admin puede gestionar
+    }
+    
+    // Completions - Ranking público
+    match /completions/{docId} {
+      // Cualquiera puede leer (Ranking público)
+      allow read: if true;
+      // Permitir crear a todos (para guardar partida de anónimos)
+      allow create: if true;
+      // Permitir actualizar (necesario para cambiar "Anónimo" -> "Nombre Jugador")
+      allow update: if true;
+    }
+    
+    // Colecciones adicionales (si existen)
+    match /characters/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /config/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /feedback/{document=**} {
+      allow read, update, delete: if isAdmin();
+      allow create: if true;
+    }
+    
+    match /fragments/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /games/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /places/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    match /puzzles/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Memories - Public read, Admin write
+    match /memories/{document=**} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}
