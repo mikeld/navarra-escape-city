@@ -25,7 +25,21 @@ export const common = {
         enigmasDesc: "Resuelve los enigmas transversales del Reino.",
         memories: "Recuerdos",
         memoriesDesc: "Vivencias de los habitantes de Navarra.",
+        explore: "Explorar",
+        homeView: {
+            explore: "Explorar"
+        }
+    },
+    homeView: {
         explore: "Explorar"
+    },
+    charactersView: {
+        title: "Ilustres del Reyno",
+        subtitle: "Conoce a las figuras que forjaron la historia de nuestra tierra.",
+        back: "Volver al Portal"
+    },
+    enigmas: {
+        solveButton: "Resolver Desafío"
     },
     games: {
         title: "Escoge tu Destino",

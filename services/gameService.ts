@@ -105,40 +105,13 @@ export const seedDatabase = async (): Promise<{ success: boolean; message: strin
   }
 };
 
-// Nueva función para subir imágenes a Storage
+// Nueva función para subir imágenes a Storage (DESACTIVADA por facturación)
 export const uploadAsset = async (
   file: File,
   folder: 'characters' | 'places' | 'resources',
   id: string
 ): Promise<{ success: boolean; url?: string; message: string }> => {
-  if (!storage || !db) return { success: false, message: "Firebase no configurado" };
-
-  try {
-    // 1. Crear referencia al archivo: assets/characters/juda.jpg
-    const storageRef = ref(storage, `assets/${folder}/${id}_${Date.now()}`);
-
-    // 2. Subir archivo
-    await uploadBytes(storageRef, file);
-
-    // 3. Obtener URL pública
-    const downloadURL = await getDownloadURL(storageRef);
-
-    // 4. Actualizar documento en Firestore
-    if (folder === 'resources') {
-      // Guardar en una colección especial de configuración
-      const configRef = doc(db, "config", "resources");
-      await setDoc(configRef, { [id]: downloadURL }, { merge: true });
-    } else {
-      const docRef = doc(db, folder, id);
-      await updateDoc(docRef, { image: downloadURL });
-    }
-
-    return { success: true, url: downloadURL, message: "Archivo subido correctamente." };
-
-  } catch (error: any) {
-    console.error("Upload error:", error);
-    return { success: false, message: error.message };
-  }
+  return { success: false, message: "Storage desactivado. Usa la carpeta public/assets local." };
 };
 
 // Obtener configuración de recursos (video/audio)
@@ -156,25 +129,12 @@ export const fetchResourceConfig = async () => {
 // In-memory cache for storage URLs to prevent redundant network calls
 const urlCache: Record<string, string> = {};
 
-// Obtener URL de Storage directamente
+// Obtener URL de Storage (MODIFICADA: devuelve el path local)
 export const getStorageUrl = async (path: string): Promise<string | null> => {
-  if (!storage) return null;
-
-  // Check cache first
-  if (urlCache[path]) {
-    return urlCache[path];
-  }
-
-  try {
-    const storageRef = ref(storage, path);
-    const url = await getDownloadURL(storageRef);
-    // Cache the result
-    urlCache[path] = url;
-    return url;
-  } catch (e) {
-    console.error("Error fetching storage URL for:", path, e);
-    return null;
-  }
+  // Devolvemos el path tal cual, asumiendo que es una ruta local en /public
+  // O podemos prefijarla si es necesario.
+  if (path.startsWith('assets/')) return '/' + path;
+  return path;
 };
 
 // Función para obtener datos dinámicos (Personajes y Lugares con fotos actualizadas)

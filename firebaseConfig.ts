@@ -6,18 +6,17 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 // ------------------------------------------------------------------
-// CONFIGURACIÓN MANUAL DE FIREBASE (OLITE)
-// Copia y pega aquí tus claves directamente desde la consola de Firebase.
+// CONFIGURACIÓN MANUAL DE FIREBASE (NAVARA HUB)
 // ------------------------------------------------------------------
 
 const firebaseConfig = {
-    apiKey: "TU_API_KEY_AQUI",
-    authDomain: "navarraescape.firebaseapp.com",
-    projectId: "navarraescape",
-    storageBucket: "navarraescape.firebasestorage.app",
-    messagingSenderId: "TU_SENDER_ID",
-    appId: "TU_APP_ID",
-    measurementId: "TU_MEASUREMENT_ID"
+    apiKey: "AIzaSyB4g7jhWh65CFdm9ZSpGaz-VapEt2UOEtE",
+    authDomain: "navarraescapecity-4f7cb.firebaseapp.com",
+    projectId: "navarraescapecity-4f7cb",
+    storageBucket: "navarraescapecity-4f7cb.firebasestorage.app",
+    messagingSenderId: "994680240985",
+    appId: "1:994680240985:web:a84abbff7b5a229345ea48",
+    measurementId: "G-L1MD3MS3ME"
 };
 
 // Initialize Firebase

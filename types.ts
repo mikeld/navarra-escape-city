@@ -212,12 +212,13 @@ export interface Enigma {
   clues: string[]; // Array de 12 pistas
   image?: string; // Imagen opcional del enigma
   youtubeVideoId?: string; // ID del video de YouTube para la solución
-  type?: 'TABLE' | 'DIFFERENCES'; // Tipo de enigma (por defecto TABLE)
+  type?: 'TABLE' | 'DIFFERENCES' | 'INPUT'; // Tipo de enigma (por defecto TABLE)
   table?: EnigmaTable; // Configuración de la tabla interactiva (Opcional si es DIFFERENCES)
   differences?: Difference[]; // Configuración para encontrar diferencias (Opcional si es TABLE)
   solutionImage?: string; // Imagen de solución para DIFFERENCES
   solutionText?: string; // Texto explicativo de la solución
   publishDate?: string; // Fecha de publicación
+  correctAnswer?: string | string[]; // Respuesta correcta para validación (especialmente para INPUT)
 }
 
 // --- USER AUTHENTICATION & PROFILE TYPES ---
