@@ -4,14 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { PlaceWithKeys } from '../../data/places';
 import { TIMELINE_EVENTS, GLOSSARY_TERMS, QUIZ_QUESTIONS, FLASHCARD_DATA, WOMEN_HISTORY, CASTLES_DATA } from '../../constants';
 // Views
-import { ChroniclesView } from './views/ChroniclesView';
 import { TimelineView } from './views/TimelineView';
 import { MonumentsView } from './views/MonumentsView';
 import { CastlesView } from './views/CastlesView';
 import { WomenView } from './views/WomenView';
 import { GlossaryView } from './views/GlossaryView';
 import { QuizView } from './views/QuizView';
-import { MultimediaView } from './views/MultimediaView';
 import { CharactersView } from '../landing/views/CharactersView';
 import { PlacesView } from '../landing/views/PlacesView';
 import { SantiagoView } from './views/SantiagoView';
@@ -19,7 +17,7 @@ import { SantiagoView } from './views/SantiagoView';
 // Types
 import { Character } from '../../types';
 
-type HistoryView = 'HUB' | 'MULTIMEDIA' | 'CHRONICLES' | 'TIMELINE' | 'MONUMENTS' | 'CASTLES' | 'WOMEN' | 'GLOSSARY' | 'QUIZ' | 'SANTIAGO' | 'CHARACTERS' | 'PLACES';
+type HistoryView = 'HUB' | 'TIMELINE' | 'MONUMENTS' | 'CASTLES' | 'WOMEN' | 'GLOSSARY' | 'QUIZ' | 'SANTIAGO' | 'CHARACTERS' | 'PLACES';
 
 interface HistoryHubProps {
     onBack: () => void;
@@ -41,10 +39,8 @@ export const HistoryHub: React.FC<HistoryHubProps> = ({ onBack, places, characte
 
 
     const menuItems = [
-        { id: 'CHARACTERS', label: 'Protagonistas', image: '/assets/historia/protagonistas.png', desc: t('menu.characters') },
-        { id: 'PLACES', label: 'Rincones', image: '/assets/historia/rincones.png', desc: t('menu.places') },
-        { id: 'MULTIMEDIA', label: 'Multimedia', image: '/assets/historia/multimedia.png', desc: t('historySection.intro.title') },
-        { id: 'CHRONICLES', label: 'Crónicas', image: '/assets/historia/cronicas.png', desc: t('historySection.chronicles.subtitle') },
+        { id: 'CHARACTERS', label: t('charactersView.title'), image: '/assets/historia/protagonistas.png', desc: t('menu.characters') },
+        { id: 'PLACES', label: t('placesView.title'), image: '/assets/historia/rincones.png', desc: t('menu.places') },
         { id: 'GLOSSARY', label: 'Glosario', image: '/assets/historia/glosario.png', desc: t('historySection.tabs.glossary') },
         { id: 'QUIZ', label: 'Desafío', image: '/assets/historia/desafio.png', desc: t('historySection.tabs.quiz') },
     ];
@@ -92,8 +88,6 @@ export const HistoryHub: React.FC<HistoryHubProps> = ({ onBack, places, characte
         switch (currentView) {
             case 'CHARACTERS': return <CharactersView onBack={() => setCurrentView('HUB')} characters={characters} />;
             case 'PLACES': return <PlacesView onBack={() => setCurrentView('HUB')} places={places} />;
-            case 'MULTIMEDIA': return <MultimediaView onBack={() => setCurrentView('HUB')} />;
-            case 'CHRONICLES': return <ChroniclesView onBack={() => setCurrentView('HUB')} />;
             case 'TIMELINE': return <TimelineView onBack={() => setCurrentView('HUB')} />;
             case 'MONUMENTS': return <MonumentsView onBack={() => setCurrentView('HUB')} places={places} />;
             case 'CASTLES': return <CastlesView onBack={() => setCurrentView('HUB')} />;

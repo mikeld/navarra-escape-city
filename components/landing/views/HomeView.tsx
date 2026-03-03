@@ -1,10 +1,6 @@
-
 import React from 'react';
-import { Button, SafeImage } from '../../UIComponents';
-import { NewsletterSignup } from '../NewsletterSignup';
+import { SafeImage } from '../../UIComponents';
 import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from '../../LanguageSwitcher';
-import UserMenu from '../UserMenu';
 import { Header } from '../Header';
 
 interface HomeViewProps {
@@ -147,7 +143,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </div>
           </button>
 
-          {/* New Section: What is Escape City? */}
+          {/* ¿Qué es Escape City? */}
           <div className="bg-navarra-crimson/90 border-2 border-navarra-gold/50 p-6 md:p-8 rounded-2xl text-left shadow-2xl overflow-hidden relative group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-navarra-gold/10 rounded-full -mr-16 -mt-16 transition-transform duration-1000 group-hover:scale-150"></div>
             <h3 className="text-xl md:text-2xl font-serif font-bold text-white mb-3">¿Qué es Escape City?</h3>
@@ -163,6 +159,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
+      {/* CITIES SECTION */}
       <section id="games" className="pt-12 pb-24 px-6 bg-black flex flex-col items-center border-t border-navarra-stone/50">
         <div className="text-center mb-12 space-y-4">
           <span className="text-navarra-gold/60 text-xs uppercase tracking-[0.3em] font-bold border-b border-navarra-gold/30 pb-1">{t('games.select')}</span>
@@ -170,68 +167,75 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full">
-          {/* Estella-Lizarra */}
+
+          {/* Estella-Lizarra — ACTIVE */}
           <div className="group relative bg-navarra-panel rounded-lg overflow-hidden border border-navarra-gold/30 hover:border-navarra-gold transition-all duration-500 shadow-2xl">
-            <div className="h-64 overflow-hidden relative">
-              <img src="/assets/destinos/estella.jpg" alt="Estella" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2s]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div className="h-64 overflow-hidden relative flex items-center justify-center bg-[#0a0800]">
+              <SafeImage
+                src="/assets/ciudades/estella_logo.png"
+                alt="Estella-Lizarra Escape City"
+                className="h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-700 p-4"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-serif text-white font-bold mb-2">{t('games.estella.title')}</h3>
               <p className="text-gray-400 text-sm mb-6">{t('games.estella.desc')}</p>
-              <a href={t('games.estella.url')} className="inline-block w-full py-4 bg-navarra-crimson text-white text-center rounded font-bold uppercase tracking-widest hover:bg-navarra-crimson/80 transition-colors">
+              <a
+                href={t('games.estella.url')}
+                className="inline-block w-full py-4 bg-navarra-crimson text-white text-center rounded font-bold uppercase tracking-widest hover:bg-navarra-crimson/80 transition-colors"
+              >
                 {t('games.estella.start')}
               </a>
             </div>
           </div>
 
-          {/* Olite */}
-          <div className="group relative bg-navarra-panel rounded-lg overflow-hidden border border-navarra-gold/30 hover:border-navarra-gold transition-all duration-500 shadow-2xl">
-            <div className="h-64 overflow-hidden relative">
-              <img src="/assets/destinos/olite.jpg" alt="Olite" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2s]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          {/* Olite — PRÓXIMAMENTE */}
+          <div className="group relative bg-navarra-panel/60 rounded-lg overflow-hidden border border-navarra-gold/20 opacity-80 hover:opacity-100 transition-all duration-500 shadow-2xl">
+            <div className="h-64 overflow-hidden relative flex items-center justify-center bg-[#0a0800]">
+              <SafeImage
+                src="/assets/ciudades/olite_logo.png"
+                alt="Olite Escape City"
+                className="h-full w-full object-contain p-4 grayscale group-hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+              <div className="absolute top-3 left-3 bg-navarra-gold/90 text-black text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
+                Próximamente
+              </div>
             </div>
             <div className="p-8">
-              <h3 className="text-2xl font-serif text-white font-bold mb-2">{t('games.olite.title')}</h3>
-              <p className="text-gray-400 text-sm mb-6">{t('games.olite.desc')}</p>
-              <a href={t('games.olite.url')} className="inline-block w-full py-4 bg-navarra-gold text-black text-center rounded font-bold uppercase tracking-widest hover:bg-navarra-gold/80 transition-colors">
+              <h3 className="text-2xl font-serif text-navarra-gold/70 font-bold mb-2">{t('games.olite.title')}</h3>
+              <p className="text-gray-500 text-sm mb-6">{t('games.olite.desc')}</p>
+              <button disabled className="w-full py-4 bg-white/5 text-gray-600 rounded font-bold uppercase tracking-widest cursor-not-allowed border border-gray-700">
                 {t('games.olite.start')}
-              </a>
+              </button>
             </div>
           </div>
 
-          {/* Tafalla (Próximamente) */}
-          <div className="group relative bg-navarra-panel/50 rounded-lg overflow-hidden border border-navarra-gold/10 grayscale opacity-60">
-            <div className="h-64 flex items-center justify-center bg-black/40">
-              <span className="text-navarra-gold/30 font-serif text-4xl transform -rotate-12">PRÓXIMAMENTE</span>
+          {/* Tafalla — PRÓXIMAMENTE */}
+          <div className="group relative bg-navarra-panel/60 rounded-lg overflow-hidden border border-navarra-gold/20 opacity-80 hover:opacity-100 transition-all duration-500 shadow-2xl">
+            <div className="h-64 overflow-hidden relative flex items-center justify-center bg-[#0a0800]">
+              <SafeImage
+                src="/assets/ciudades/tafalla_logo.png"
+                alt="Tafalla Escape City"
+                className="h-full w-full object-contain p-4 grayscale group-hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+              <div className="absolute top-3 left-3 bg-navarra-gold/90 text-black text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
+                Próximamente
+              </div>
             </div>
             <div className="p-8">
-              <h3 className="text-2xl font-serif text-navarra-gold/40 font-bold mb-2">{t('games.tafalla.title')}</h3>
-              <p className="text-gray-600 text-sm mb-6">{t('games.tafalla.desc')}</p>
-              <button disabled className="w-full py-4 bg-white/5 text-gray-700 rounded font-bold uppercase tracking-widest cursor-not-allowed">
+              <h3 className="text-2xl font-serif text-navarra-gold/70 font-bold mb-2">{t('games.tafalla.title')}</h3>
+              <p className="text-gray-500 text-sm mb-6">{t('games.tafalla.desc')}</p>
+              <button disabled className="w-full py-4 bg-white/5 text-gray-600 rounded font-bold uppercase tracking-widest cursor-not-allowed border border-gray-700">
                 {t('games.tafalla.start')}
               </button>
             </div>
           </div>
+
         </div>
       </section>
-
-      <NewsletterSignup />
-
-      <button
-        onClick={onToggleMusic}
-        className="fixed bottom-8 right-8 z-40 w-16 h-16 bg-navarra-gold/90 hover:bg-navarra-gold rounded-full shadow-[0_0_30px_rgba(212,175,55,0.5)] hover:shadow-[0_0_50px_rgba(212,175,55,0.8)] transition-all duration-300 flex items-center justify-center group hover:scale-110 active:scale-95"
-      >
-        {musicPlaying ? (
-          <svg className="w-8 h-8 text-navarra-dark" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-          </svg>
-        ) : (
-          <svg className="w-8 h-8 text-navarra-dark" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        )}
-      </button>
     </>
   );
 };
