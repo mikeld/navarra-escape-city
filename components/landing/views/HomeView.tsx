@@ -194,7 +194,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div className="group relative bg-navarra-panel/60 rounded-lg overflow-hidden border border-navarra-gold/20 opacity-80 hover:opacity-100 transition-all duration-500 shadow-2xl">
             <div className="h-64 overflow-hidden relative flex items-center justify-center bg-[#0a0800]">
               <SafeImage
-                src="/assets/ciudades/olite_logo.png"
+                src="/assets/ciudades/olite_logo.jpg"
                 alt="Olite Escape City"
                 className="h-full w-full object-contain p-4 grayscale group-hover:grayscale-0 transition-all duration-700"
               />
@@ -216,7 +216,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           <div className="group relative bg-navarra-panel/60 rounded-lg overflow-hidden border border-navarra-gold/20 opacity-80 hover:opacity-100 transition-all duration-500 shadow-2xl">
             <div className="h-64 overflow-hidden relative flex items-center justify-center bg-[#0a0800]">
               <SafeImage
-                src="/assets/ciudades/tafalla_logo.png"
+                src="/assets/ciudades/tafalla_logo.jpg"
                 alt="Tafalla Escape City"
                 className="h-full w-full object-contain p-4 grayscale group-hover:grayscale-0 transition-all duration-700"
               />

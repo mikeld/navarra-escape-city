@@ -1,6 +1,11 @@
-
 export const enigmas = {
     "solveButton": "Resolver Desafío",
+    "viewTag": "Reto Navarra",
+    "viewTitle": "Los Enigmas del Reyno",
+    "viewSubtitle": "Resuelve los desafíos transversales y descubre los secretos mejor guardados de nuestra tierra.",
+    "missionTitle": "Tu Misión",
+    "cluesTitle": "Pistas y Hallazgos",
+    "viewSolutionVideo": "Ver Vídeo de la Solución",
     "enigma1": {
         "title": "Las Cadenas de la Victoria",
         "desc": "¿Sabes qué batalla dio origen a las cadenas de nuestro escudo?",

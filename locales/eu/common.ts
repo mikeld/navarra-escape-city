@@ -1,6 +1,7 @@
 
 export const common = {
     common: {
+        back: "Bueltatu",
         backToHome: "Hasierara itzuli",
         close: "Dokumentua itxi",
         loading: "Kargatzen...",
@@ -82,7 +83,7 @@ export const common = {
             title: "Estella-Lizarra",
             desc: "Ega hiriko eta erdi aroko misterioetara jo.",
             start: "Lizarrara joan",
-            url: "https://estella.escapecity.es"
+            url: "https://estellaescapecity.com"
         },
         olite: {
             title: "Erriberri / Olite",

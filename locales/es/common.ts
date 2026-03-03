@@ -1,6 +1,7 @@
 
 export const common = {
     common: {
+        back: "Volver",
         backToHome: "Volver al Inicio",
         close: "Cerrar Documento",
         loading: "Cargando...",
@@ -82,7 +83,7 @@ export const common = {
             title: "Estella-Lizarra",
             desc: "Descubre la Ciudad del Ega y sus misterios medievales.",
             start: "Ir a Estella",
-            url: "https://estella.escapecity.es"
+            url: "https://estellaescapecity.com"
         },
         olite: {
             title: "Olite",
