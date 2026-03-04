@@ -37,7 +37,8 @@ export const common = {
     historySection: {
         intro: {
             title: "History of Navarre",
-            description: "The Kingdom of Navarre was one of the most singular medieval states in Europe. From the small nucleus of Vasconian resistance against Franks and Muslims in the 9th century, the kings of Pamplona forged a kingdom that became, under Sancho III the Great, the hegemonic power of the Iberian Peninsula. Its strategic position on the Road to Santiago transformed cities like Estella and Pamplona into cosmopolitan centers of European Romanesque art. With the conquest by Fernando the Catholic in 1512, Navarre joined the Spanish crown, yet preserving its Fueros and a unique identity that has survived to this day."
+            description: "Discover the chronicle of a millennial community that forged its identity through coexistence, resistance and the pact.",
+            summaryButton: "View Historical Summary"
         },
         chronicles: {
             subtitle: "Chronicles and documents of the Kingdom"
@@ -46,6 +47,21 @@ export const common = {
             glossary: "Historical Glossary",
             quiz: "Knowledge Challenge"
         }
+    },
+    historySummary: {
+        title: "Summary of the History of Navarre",
+        s1Title: "1. Antiquity and Formation of the Kingdom",
+        s1Text: "The Vascones, a tribe settled in a territory similar to present-day Navarre, experienced intense Romanization, which led to the founding of Pamplona in 75 BC. After the Muslim invasion in the 8th century, a nucleus of resistance arose in the Pyrenees. After milestones such as the Battle of Roncesvalles (778), the Kingdom of Pamplona emerged. Íñigo Arista (824) is considered its first independent leader.",
+        s2Title: "2. The Apogee under Sancho III and the Kingdom of Navarre",
+        s2Text: "Under the reign of Sancho III the Great (1004-1035), the kingdom reached its zenith of influence, exercising a de facto hegemony over most of the Iberian Christian nuclei and linking Navarre to Europe through the Camino de Santiago. In 1162, Sancho VI the Wise officially changed the title of King of the Pamplonesians to King of Navarre.",
+        s3Title: "3. The French Dynasties and the Pactist Regime",
+        s3Text: "From 1234, with the arrival of the House of Champagne, Navarre entered the orbit of French dynasties. During this period the pactist regime was consolidated: the king had to swear to respect the fueros of his subjects before receiving their loyalty. Monarchs like Carlos III the Noble (1387-1425) promoted cultural and architectural splendour.",
+        s4Title: "4. Civil War and Conquest (1512)",
+        s4Text: "The 15th century was marked by a bloody civil war between Agramonteses and Beaumonteses, which weakened the kingdom. This instability was exploited by Fernando the Catholic, whose troops invaded Navarre in 1512. The High Navarre was incorporated into the Crown of Castile while retaining its own institutions.",
+        s5Title: "5. From Kingdom to Province and Foral Autonomy",
+        s5Text: "After the Carlist Wars in the 19th century, the Ancien Régime entered a crisis. In 1841, through the Ley Paccionada, Navarre ceased to be formally a kingdom and became a Foral Province. It retained broad administrative and fiscal autonomy through the Economic Agreement, by which Navarre collects its own taxes.",
+        s6Title: "6. Navarre Today",
+        s6Text: "With the arrival of democracy and the Constitution of 1978, Navarre was consolidated as a Foral Community. Its current regime is governed by the LORAFNA (1982), which integrates the historical rights of the fueros into the Spanish constitutional framework, allowing a high degree of self-government."
     },
     charactersView: {
         tag: "Illustrious of the Kingdom",
@@ -130,6 +146,82 @@ export const common = {
         urbasa: {
             name: "Sierra de Urbasa and Andía",
             desc: "A karst plateau of ancient forests and dolmens. The birth of the Urederra river is one of Navarre's most spectacular landscapes."
+        },
+        palacioOlite: {
+            name: "Royal Palace of Olite",
+            desc: "One of the most interesting Gothic civic complexes in Europe, seat of the Navarrese kings, with its whimsical tower skyline and exotic gardens."
+        },
+        urederra: {
+            name: "Urederra Spring",
+            desc: "Nature reserve in the Urbasa range known for its turquoise-blue pools and lush beech forest."
+        },
+        catedralPamplona: {
+            name: "Cathedral of Pamplona",
+            desc: "The most important Gothic ensemble in Navarre; its cloister is recognized as one of the most exquisite of universal Gothic art."
+        },
+        catedralTudela: {
+            name: "Cathedral of Tudela",
+            desc: "National monument built in the 12th century on an ancient mosque, famous for its spectacular Last Judgment doorway."
+        },
+        colegiataRoncesvalles: {
+            name: "Royal Collegiate Church of Roncesvalles",
+            desc: "A key milestone of the Camino de Santiago and a jewel of French Gothic, housing the tomb of King Sancho VII the Strong."
+        },
+        fozLumbier: {
+            name: "Foz de Lumbier",
+            desc: "A narrow gorge carved by the Irati river, where griffon vultures soar above its impressive reddish walls."
+        },
+        fozArbayun: {
+            name: "Foz de Arbayún",
+            desc: "The most extensive and impressive gorge in Navarre, a nature reserve with vertical walls nearly 6 kilometres long."
+        },
+        eunate: {
+            name: "Church of Santa María de Eunate",
+            desc: "An octagonal Romanesque church surrounded by an exterior cloister, shrouded in mystery and legend."
+        },
+        cercoArtajona: {
+            name: "Cerco de Artajona",
+            desc: "The most important medieval fortification in the Middle Zone, with an 11th-century walled enclosure preserving nine towers."
+        },
+        monasterioOliva: {
+            name: "Monastery of La Oliva",
+            desc: "A genuine example of Cistercian art in Spain, with a spacious church and Gothic cloister that invite meditation."
+        },
+        aralar: {
+            name: "Sierra de Aralar",
+            desc: "A large karst massif combining blind valleys, caves, always-green meadows and prehistoric dolmens."
+        },
+        murallasPamplona: {
+            name: "Walls of Pamplona",
+            desc: "Five kilometres of centuries-old walls surrounding the old town, one of the best-preserved military complexes in Spain."
+        },
+        sanMiguelAralar: {
+            name: "Sanctuary of San Miguel de Aralar",
+            desc: "An ancient temple at over 1,200 metres altitude housing a Romanesque altarpiece, a masterpiece of European enamelwork."
+        },
+        monasterioFitero: {
+            name: "Monastery of Fitero",
+            desc: "The first Cistercian monastery on the Iberian Peninsula, whose abbey church is among the most important of the order in Europe."
+        },
+        zugarramurdi: {
+            name: "Cave of Zugarramurdi",
+            desc: "A karstic tunnel where legend places the celebration of akelarres, the ritual gatherings judged by the Inquisition in the 17th century."
+        },
+        palacioReyesEstella: {
+            name: "Palace of the Kings of Navarre",
+            desc: "The only Romanesque civic building in Navarre, now housing the Gustavo de Maeztu Museum in Estella."
+        },
+        cascadaXorroxin: {
+            name: "Xorroxin Waterfall",
+            desc: "A beautiful waterfall in the Baztán valley, surrounded by spectacular beech and oak woodland."
+        },
+        picoOrhi: {
+            name: "Orhi Peak",
+            desc: "At 2,017 metres, it is the first 'two-thousander' of the Navarrese Pyrenees and offers exceptional views over the Irati Forest."
+        },
+        monasterioIranzu: {
+            name: "Monastery of Iranzu",
+            desc: "A Cistercian abbey hidden in the Yerri valley, built between the 12th and 14th centuries, known for its elegant and austere Gothic cloister."
         }
     }
 };

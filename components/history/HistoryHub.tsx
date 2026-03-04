@@ -13,11 +13,13 @@ import { QuizView } from './views/QuizView';
 import { CharactersView } from '../landing/views/CharactersView';
 import { PlacesView } from '../landing/views/PlacesView';
 import { SantiagoView } from './views/SantiagoView';
+import { HistorySummaryView } from './views/HistorySummaryView';
+import { MultimediaView } from './views/MultimediaView';
 
 // Types
 import { Character } from '../../types';
 
-type HistoryView = 'HUB' | 'TIMELINE' | 'MONUMENTS' | 'CASTLES' | 'WOMEN' | 'GLOSSARY' | 'QUIZ' | 'SANTIAGO' | 'CHARACTERS' | 'PLACES';
+type HistoryView = 'HUB' | 'TIMELINE' | 'MONUMENTS' | 'CASTLES' | 'WOMEN' | 'GLOSSARY' | 'QUIZ' | 'SANTIAGO' | 'CHARACTERS' | 'PLACES' | 'HISTORY_SUMMARY' | 'MULTIMEDIA';
 
 interface HistoryHubProps {
     onBack: () => void;
@@ -30,17 +32,10 @@ export const HistoryHub: React.FC<HistoryHubProps> = ({ onBack, places, characte
     const { t } = useTranslation();
     const [currentView, setCurrentView] = useState<HistoryView>(initialView || 'HUB');
 
-    // Dynamic data for characters (fetching logic might need to be moved here or passed via props if not using context)
-    // For now assuming these are available via props or global context if needed. 
-    // Actually HistorySection gets 'places' but not 'characters'. We need to fix this in LandingPage/HistorySection too if CharactersView depends on it.
-    // LandingPage passes dynamicCharacters to CharactersView. 
-    // We should probably pass 'dynamicCharacters' to HistorySection -> HistoryHub as well.
-    // I will check HistorySection props momentarily.
-
-
     const menuItems = [
         { id: 'CHARACTERS', label: t('charactersView.title'), image: '/assets/historia/protagonistas.png', desc: t('menu.characters') },
         { id: 'PLACES', label: t('placesView.title'), image: '/assets/historia/rincones.png', desc: t('menu.places') },
+        { id: 'MULTIMEDIA', label: 'Multimedia', image: '/assets/historia/multimedia.png', desc: 'Audio, vídeo, infografía y presentación histórica' },
         { id: 'GLOSSARY', label: 'Glosario', image: '/assets/historia/glosario.png', desc: t('historySection.tabs.glossary') },
         { id: 'QUIZ', label: 'Desafío', image: '/assets/historia/desafio.png', desc: t('historySection.tabs.quiz') },
     ];
@@ -49,7 +44,16 @@ export const HistoryHub: React.FC<HistoryHubProps> = ({ onBack, places, characte
         <div className="animate-fade-in">
             <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-6xl font-serif text-white mb-4">{t('menu.history')}</h2>
-                <p className="text-navarra-gold uppercase tracking-[0.2em] text-sm md:text-base max-w-2xl mx-auto">{t('historySection.intro.description')}</p>
+                <p className="text-navarra-gold uppercase tracking-[0.2em] text-sm md:text-base max-w-2xl mx-auto mb-6">{t('historySection.intro.description')}</p>
+                <button
+                    onClick={() => setCurrentView('HISTORY_SUMMARY')}
+                    className="group inline-flex items-center gap-3 bg-navarra-gold/10 hover:bg-navarra-gold/20 border border-navarra-gold/40 hover:border-navarra-gold text-navarra-gold hover:text-white px-6 py-3 rounded-full uppercase tracking-widest text-xs font-bold transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,163,70,0.3)]"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    {t('historySection.intro.summaryButton')}
+                </button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -95,6 +99,8 @@ export const HistoryHub: React.FC<HistoryHubProps> = ({ onBack, places, characte
             case 'WOMEN': return <WomenView onBack={() => setCurrentView('HUB')} />;
             case 'GLOSSARY': return <GlossaryView onBack={() => setCurrentView('HUB')} />;
             case 'QUIZ': return <QuizView onBack={() => setCurrentView('HUB')} />;
+            case 'HISTORY_SUMMARY': return <HistorySummaryView onBack={() => setCurrentView('HUB')} />;
+            case 'MULTIMEDIA': return <MultimediaView onBack={() => setCurrentView('HUB')} />;
             default: return renderHub();
         }
     };

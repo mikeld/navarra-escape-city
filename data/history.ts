@@ -26,11 +26,31 @@ export const GLOSSARY_TERMS = [
     { term: 'Agramonteses y Beaumonteses', defKey: 'glossary.facciones' },
     { term: 'Jus del Castillo', defKey: 'glossary.jus_castillo' },
     { term: 'Sinagoga de Elgacena', defKey: 'glossary.sinagoga' },
-    { term: 'Romanico', defKey: 'glossary.romanico' },
+    { term: 'Románico', defKey: 'glossary.romanico' },
     { term: 'Infanzón', defKey: 'glossary.infanzon' },
     { term: 'Almirante del Reyno', defKey: 'glossary.almirante' },
     { term: 'Javierada', defKey: 'glossary.javierada' },
     { term: 'Navas de Tolosa', defKey: 'glossary.navas' },
+    // Conceptos Institucionales y Políticos
+    { term: 'Ley Paccionada (1841)', defKey: 'glossary.ley_paccionada' },
+    { term: 'Convenio Económico', defKey: 'glossary.convenio_economico' },
+    { term: 'LORAFNA', defKey: 'glossary.lorafna' },
+    { term: 'Pactismo', defKey: 'glossary.pactismo' },
+    { term: 'Cámara de Comptos', defKey: 'glossary.camara_comptos' },
+    { term: 'Sobrecarta', defKey: 'glossary.sobrecarta' },
+    // Términos de la Administración Medieval
+    { term: 'Tenencia', defKey: 'glossary.tenencia' },
+    { term: 'Ricohombre', defKey: 'glossary.ricohombre' },
+    { term: 'Cendea', defKey: 'glossary.cendea' },
+    { term: 'Almiradío', defKey: 'glossary.almiradio' },
+    { term: 'Congozante', defKey: 'glossary.congozante' },
+    // Historia y Patrimonio
+    { term: 'Gamazada', defKey: 'glossary.gamazada' },
+    { term: 'Privilegio de la Unión (1423)', defKey: 'glossary.privilegio_union' },
+    { term: 'Hórreo', defKey: 'glossary.horreo' },
+    { term: 'Romance Navarro', defKey: 'glossary.romance_navarro' },
+    { term: 'Arqueta de Leyre', defKey: 'glossary.arqueta_leyre' },
+    { term: 'Junta de Infanzones de Obanos', defKey: 'glossary.junta_infanzones' },
 ];
 
 export const NAVARRA_QUIZ_QUESTIONS = [

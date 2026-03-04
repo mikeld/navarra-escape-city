@@ -37,7 +37,8 @@ export const common = {
     historySection: {
         intro: {
             title: "Historia de Navarra",
-            description: "El Reino de Navarra fue uno de los estados medievales más singulares de Europa. Desde el pequeño núcleo de resistencia vascona frente a francos y musulmanes en el siglo IX, los reyes de Pamplona forjaron un reino que llegó a ser, bajo Sancho III el Mayor, la potencia hegemónica de la Península Ibérica. Su posición estratégica en el Camino de Santiago convirtió a ciudades como Estella y Pamplona en centros cosmopolitas del románico europeo. Con la conquista de Fernando el Católico en 1512, Navarra se incorporó a la corona española, conservando sin embargo sus Fueros y una identidad propia que ha llegado hasta nuestros días."
+            description: "Descubre la crónica de una colectividad milenaria que forjó su identidad a través de la convivencia, la resistencia y el pacto.",
+            summaryButton: "Ver Resumen Histórico"
         },
         chronicles: {
             subtitle: "Crónicas y documentos del Reyno"
@@ -46,6 +47,21 @@ export const common = {
             glossary: "Glosario Histórico",
             quiz: "Desafío de Conocimiento"
         }
+    },
+    historySummary: {
+        title: "Resumen de la Historia de Navarra",
+        s1Title: "1. Antigüedad y Formación del Reino",
+        s1Text: "Los vascones, tribu asentada en un territorio similar a la Navarra actual, vivieron una intensa romanización que dio lugar a la fundación de Pamplona en el año 75 a. C. Tras la invasión musulmana en el siglo VIII, surgió en el Pirineo un núcleo de resistencia que, tras hitos como la Batalla de Roncesvalles (778), permitió la aparición del Reino de Pamplona. Íñigo Arista (824) es considerado su primer caudillo independiente.",
+        s2Title: "2. El Apogeo con Sancho III y el Reino de Navarra",
+        s2Text: "Bajo el reinado de Sancho III el Mayor (1004-1035), el reino alcanzó su cenit de influencia, ejerciendo una hegemonía de facto sobre gran parte de los núcleos cristianos peninsulares y vinculando a Navarra con Europa a través del Camino de Santiago. En 1162, Sancho VI el Sabio cambió oficialmente el título de Rey de los Pamploneses por el de Rey de Navarra, consolidando la idea del monarca como señor de un territorio.",
+        s3Title: "3. Las Dinastías Francesas y el Régimen Pactista",
+        s3Text: "A partir de 1234, con la llegada de la Casa de Champaña, Navarra entró en la órbita de dinastías francesas. Durante este periodo se afianzó el régimen pactista: el rey debía jurar respetar los fueros de sus súbditos para recibir fidelidad a cambio. Monarcas como Carlos III el Noble (1387-1425) impulsaron un esplendor cultural y arquitectónico, destacando la construcción del Palacio de Olite y la unificación de los burgos de Pamplona.",
+        s4Title: "4. Guerra Civil y Conquista (1512)",
+        s4Text: "El siglo XV estuvo marcado por una cruenta guerra civil entre agramonteses y beamonteses, lo que debilitó al reino. Esta inestabilidad fue aprovechada por Fernando el Católico, cuyas tropas invadieron Navarra en 1512. En 1515, la Alta Navarra se incorporó a la Corona de Castilla, pero manteniendo su condición de reino anexionado con instituciones, moneda y aduanas propias.",
+        s5Title: "5. De Reino a Provincia y la Autonomía Foral",
+        s5Text: "Tras las Guerras Carlistas en el siglo XIX, el sistema del Antiguo Régimen entró en crisis. En 1841, mediante la Ley Paccionada, Navarra dejó de ser formalmente un reino para convertirse en una Provincia Foral. Aunque perdió su soberanía política, conservó una amplia autonomía administrativa y fiscal mediante el Convenio Económico, por el cual Navarra recauda sus propios impuestos.",
+        s6Title: "6. Navarra en la Actualidad",
+        s6Text: "Con la llegada de la democracia y la Constitución de 1978, Navarra se consolidó como Comunidad Foral. Su régimen actual se rige por la LORAFNA (1982), que integra los derechos históricos de los fueros en el marco constitucional español, permitiendo un alto grado de autogobierno y desarrollo económico."
     },
     charactersView: {
         tag: "Ilustres del Reyno",
@@ -130,6 +146,82 @@ export const common = {
         urbasa: {
             name: "Sierra de Urbasa y Andía",
             desc: "Meseta kárstica de bosques milenarios y dólmenes. El nacimiento del río Urederra es uno de los paisajes más espectaculares de Navarra."
+        },
+        palacioOlite: {
+            name: "Palacio Real de Olite",
+            desc: "Uno de los conjuntos civiles góticos más interesantes de Europa, sede de los reyes navarros, con su silueta de torres caprichosas y jardines exóticos."
+        },
+        urederra: {
+            name: "Nacedero del Urederra",
+            desc: "Reserva natural en la sierra de Urbasa conocida por sus pozas de aguas de un azul turquesa intenso y su frondoso bosque de hayas."
+        },
+        catedralPamplona: {
+            name: "Catedral de Santa María la Real de Pamplona",
+            desc: "El conjunto gótico más importante de Navarra; su claustro es reconocido como uno de los más exquisitos del gótico universal."
+        },
+        catedralTudela: {
+            name: "Catedral de Santa María de Tudela",
+            desc: "Monumento nacional construido en el siglo XII sobre una antigua mezquita, famoso por su espectacular Puerta del Juicio Final."
+        },
+        colegiataRoncesvalles: {
+            name: "Real Colegiata de Roncesvalles",
+            desc: "Hito fundamental del Camino de Santiago y joya del gótico francés, que alberga la tumba del rey Sancho VII el Fuerte."
+        },
+        fozLumbier: {
+            name: "Foz de Lumbier",
+            desc: "Estrecha garganta labrada por el río Irati, donde se pueden avistar buitres leonados sobrevolando sus imponentes paredes rojizas."
+        },
+        fozArbayun: {
+            name: "Foz de Arbayún",
+            desc: "La más extensa e impresionante de las gargantas navarras, reserva natural con paredes verticales de casi 6 kilómetros de longitud."
+        },
+        eunate: {
+            name: "Iglesia de Santa María de Eunate",
+            desc: "Templo románico de planta octogonal rodeado por un claustro exterior, envuelto en un aura de misterio y leyenda."
+        },
+        cercoArtajona: {
+            name: "Cerco de Artajona",
+            desc: "La fortificación popular medieval más importante de la Zona Media, con un recinto amurallado del siglo XI que conserva nueve torreones."
+        },
+        monasterioOliva: {
+            name: "Monasterio de la Oliva",
+            desc: "Ejemplo genuino del arte cisterciense en España, con una amplia iglesia y un claustro gótico que invitan a la meditación."
+        },
+        aralar: {
+            name: "Sierra de Aralar",
+            desc: "Gran macizo kárstico que combina paisajes de valles ciegos y cuevas con prados siempre verdes y dólmenes prehistóricos."
+        },
+        murallasPamplona: {
+            name: "Murallas de Pamplona",
+            desc: "Cinco kilómetros de murallas centenarias que rodean el casco antiguo, constituyendo uno de los complejos bélicos mejor conservados de España."
+        },
+        sanMiguelAralar: {
+            name: "Santuario de San Miguel de Aralar",
+            desc: "Templo milenario ubicado a más de 1.200 metros de altitud que alberga un retablo románico, obra cumbre de la esmaltería europea."
+        },
+        monasterioFitero: {
+            name: "Monasterio de Fitero",
+            desc: "El primer monasterio cisterciense de la Península Ibérica, cuya iglesia abacial es de las más importantes de la orden en Europa."
+        },
+        zugarramurdi: {
+            name: "Cueva de Zugarramurdi",
+            desc: "Túnel kárstico donde la leyenda sitúa la celebración de akelarres, las fiestas rituales juzgadas por la Inquisición en el siglo XVII."
+        },
+        palacioReyesEstella: {
+            name: "Palacio de los Reyes de Navarra",
+            desc: "El único edificio románico de carácter civil en Navarra, actual sede del Museo Gustavo de Maeztu en Estella."
+        },
+        cascadaXorroxin: {
+            name: "Cascada de Xorroxin",
+            desc: "Hermoso salto de agua en el valle de Baztán, rodeado de una vegetación espectacular de hayas y robles."
+        },
+        picoOrhi: {
+            name: "Pico de Orhi",
+            desc: "Con 2.017 metros, es el primer 'dos mil' del Pirineo navarro y ofrece vistas excepcionales sobre la Selva de Irati."
+        },
+        monasterioIranzu: {
+            name: "Monasterio de Iranzu",
+            desc: "Abadía cisterciense oculta en el valle de Yerri, construida entre los siglos XII y XIV, conocida por su elegante y austero claustro gótico."
         }
     }
 };

@@ -15,6 +15,26 @@ export const glossary = {
         infanzon: "Miembro de la baja nobleza navarra, por debajo de los ricoshombres. Los infanzones tenían privilegios nobiliarios pero sin títulos ni grandes señoríos. Su existencia reflejaba la complejidad del sistema feudal navarro, donde la nobleza estaba muy estratificada.",
         almirante: "Alto cargo naval y militar del Reino de Navarra, encargado de las fuerzas fluviales y, en ocasiones, de la diplomacia. Navarra, aunque sin costa marítima directa, tenía intereses comerciales y navegables a través del Ebro y sus afluentes.",
         javierada: "Peregrinación popular que cada año en marzo recorre los 20 kilómetros entre Sangüesa y el Castillo de Javier, en honor a San Francisco Javier, Patrón de Navarra. Con decenas de miles de participantes, es la mayor peregrinación de Navarra y una de las más importantes de España.",
-        navas: "La Batalla de las Navas de Tolosa (1212) fue uno de los enfrentamientos más decisivos de la Reconquista. Los reyes de Castilla, Aragón y Navarra, junto con cruzados europeos, derrotaron al ejército almohade del califa Muhammad al-Nasir. La participación heroica de Sancho VII el Fuerte de Navarra quedó inmortalizada en el escudo del reino."
+        navas: "La Batalla de las Navas de Tolosa (1212) fue uno de los enfrentamientos más decisivos de la Reconquista. Los reyes de Castilla, Aragón y Navarra, junto con cruzados europeos, derrotaron al ejército almohade del califa Muhammad al-Nasir. La participación heroica de Sancho VII el Fuerte de Navarra quedó inmortalizada en el escudo del reino.",
+        // Conceptos Institucionales y Políticos
+        ley_paccionada: "Norma jurídica de 1841 que transformó a Navarra de Reino a Provincia Foral tras la Primera Guerra Carlista. Supuso la pérdida de soberanía política y de instituciones como las Cortes, pero permitió conservar una amplia autonomía administrativa y fiscal.",
+        convenio_economico: "Sistema de financiación único por el cual Navarra tiene la potestad de establecer y recaudar sus propios impuestos. A cambio, satisface al Estado una 'aportación económica' por las competencias no asumidas, como defensa o asuntos exteriores.",
+        lorafna: "Siglas de la Ley Orgánica de Reintegración y Amejoramiento del Régimen Foral de Navarra de 1982. Es la norma institucional básica que integra los derechos históricos en el marco constitucional actual.",
+        pactismo: "Régimen político esencial de la identidad navarra basado en el pacto entre el Rey y el Reino. El monarca debía jurar respetar los fueros antes de que sus súbditos le juraran fidelidad.",
+        camara_comptos: "Creada en 1365 por Carlos II, es el tribunal de cuentas encargado de fiscalizar los fondos públicos. Su sede en Pamplona es el único edificio gótico civil que sobrevive en la ciudad.",
+        sobrecarta: "Derecho de las instituciones navarras para revisar las órdenes del Rey. Si una disposición real vulneraba las leyes propias, se declaraba 'contrafuero' y no tenía vigor sin este permiso.",
+        // Términos de la Administración Medieval
+        tenencia: "Sistema de gobierno territorial donde un 'tenente' gobernaba una plaza fuerte o distrito en nombre del Rey. A diferencia del modelo feudal francés, en Navarra el cargo no era hereditario y la soberanía siempre permanecía en el monarca.",
+        ricohombre: "Magnate de la alta nobleza que formaba parte del consejo real o 'curia regia' y desempeñaba los principales oficios de la corte.",
+        cendea: "Agrupación administrativa de varios pueblos pequeños, característica de la Cuenca de Pamplona.",
+        almiradio: "Antigua división administrativa medieval. El municipio de Navascués es el único que conserva hoy esta denominación en su territorio.",
+        congozante: "Término que designa a los 22 municipios y valles que poseen derechos históricos de aprovechamiento (pastoreo, agricultura) sobre las Bardenas Reales.",
+        // Historia y Patrimonio
+        gamazada: "Gran protesta popular ocurrida en 1893 cuando el ministro Germán Gamazo intentó suprimir la autonomía fiscal navarra. Logró reunir a más de 100.000 personas en defensa de los fueros.",
+        privilegio_union: "Decreto de Carlos III el Noble (1423) que unificó los tres burgos medievales enfrentados de Pamplona (Navarrería, San Cernin y San Nicolás) en una sola ciudad.",
+        horreo: "Construcción tradicional elevada para almacenar grano. En Navarra destaca el Valle de Aezkoa, que conserva la mayor concentración de estas piezas declaradas Bien de Interés Cultural.",
+        romance_navarro: "Lengua derivada del latín que fue el idioma principal de la administración y la justicia durante la Edad Media en el Reino.",
+        arqueta_leyre: "Pieza maestra de la eboraria (talla en marfil) medieval que se conserva en el Museo de Navarra, representando escenas cortesanas.",
+        junta_infanzones: "Hermandad de caballeros e infanzones formada en el siglo XIII para proteger al Reino y sus fueros frente a posibles abusos del poder real.",
     }
 };
