@@ -9,7 +9,10 @@ export default {
     ...common,
     ...places,
     ...quiz,
-    ...enigmas,
+    enigmas: {
+        ...(common.enigmas || {}),
+        ...enigmas
+    },
     ...glossary,
     // Placeholders o valores por defecto para el resto
     history: {},
