@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { QUIZ_QUESTIONS, FLASHCARD_DATA } from '../../../constants';
+import { NAVARRA_QUIZ_QUESTIONS, FLASHCARD_DATA } from '../../../constants';
 import { QuizTab } from '../../QuizTab';
 
 interface ViewProps {
@@ -10,7 +10,6 @@ interface ViewProps {
 
 export const QuizView: React.FC<ViewProps> = ({ onBack }) => {
     const { t } = useTranslation();
-    const [mode, setMode] = useState<'QUIZ' | 'FLASHCARDS'>('QUIZ');
 
     return (
         <div className="animate-fade-in max-w-4xl mx-auto">
@@ -21,25 +20,20 @@ export const QuizView: React.FC<ViewProps> = ({ onBack }) => {
                 {t('common.back')}
             </button>
 
+            {/* Header */}
             <div className="text-center mb-8">
-                <div className="inline-flex bg-black/40 p-1 rounded-lg border border-white/10">
-                    <button
-                        onClick={() => setMode('QUIZ')}
-                        className={`px-6 py-2 rounded-md text-sm font-bold uppercase tracking-widest transition-all ${mode === 'QUIZ' ? 'bg-navarra-gold text-black shadow-lg' : 'text-gray-400 hover:text-white'}`}
-                    >
-                        {t('historySection.tabs.quiz')}
-                    </button>
-                    <button
-                        onClick={() => setMode('FLASHCARDS')}
-                        className={`px-6 py-2 rounded-md text-sm font-bold uppercase tracking-widest transition-all ${mode === 'FLASHCARDS' ? 'bg-navarra-gold text-black shadow-lg' : 'text-gray-400 hover:text-white'}`}
-                    >
-                        {t('historySection.tabs.challenge')}
-                    </button>
+                <div className="inline-block mb-3 px-4 py-1 bg-navarra-gold/10 border border-navarra-gold/30 rounded-full text-navarra-gold text-xs uppercase tracking-[0.25em] font-bold">
+                    Cuestionario
                 </div>
+                <h2 className="text-3xl md:text-4xl font-serif text-white mb-2">{t('historySection.tabs.quiz')}</h2>
+                <p className="text-gray-400 text-sm max-w-xl mx-auto">
+                    {NAVARRA_QUIZ_QUESTIONS.length} preguntas sobre la Historia de Navarra — desde la Antigüedad hasta la actualidad
+                </p>
+                <div className="h-0.5 w-24 bg-navarra-gold mx-auto mt-4" />
             </div>
 
-            <div className="bg-black/20 p-4 md:p-8 rounded-xl border border-white/5 min-h-[400px]">
-                <QuizTab mode={mode} questions={QUIZ_QUESTIONS} flashcards={FLASHCARD_DATA} />
+            <div className="bg-black/20 p-4 md:p-8 rounded-xl border border-white/5">
+                <QuizTab mode="QUIZ" questions={NAVARRA_QUIZ_QUESTIONS} flashcards={FLASHCARD_DATA} />
             </div>
         </div>
     );
