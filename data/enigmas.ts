@@ -5,12 +5,12 @@ export const ENIGMAS: Enigma[] = [
     {
         id: 'cadenas_navarra',
         number: 1,
-        title: 'Las Cadenas de la Victoria',
-        description: '¿En qué famosa batalla Sancho VII el Fuerte rompió las cadenas que hoy forman nuestro escudo?',
+        title: 'enigmas.enigma1.title',
+        description: 'enigmas.enigma1.description',
         clues: [
-            'Ocurrió en el año 1212.',
-            'Fue una batalla decisiva de la Reconquista.',
-            'El nombre empieza por N...'
+            'enigmas.enigma1.clue1',
+            'enigmas.enigma1.clue2',
+            'enigmas.enigma1.clue3'
         ],
         type: 'INPUT',
         correctAnswer: 'Navas de Tolosa'
@@ -18,12 +18,12 @@ export const ENIGMAS: Enigma[] = [
     {
         id: 'rey_sabio',
         number: 2,
-        title: 'El Rey Carlos III el Noble',
-        description: '¿Cuál era el lema de este rey, constructor del Palacio de Olite, que buscaba la paz?',
+        title: 'enigmas.enigma2.title',
+        description: 'enigmas.enigma2.description',
         clues: [
-            'Es una palabra en francés antiguo.',
-            'Significa algo así como "A pesar de todo".',
-            'Comienza por U...'
+            'enigmas.enigma2.clue1',
+            'enigmas.enigma2.clue2',
+            'enigmas.enigma2.clue3'
         ],
         type: 'INPUT',
         correctAnswer: 'Uayn'

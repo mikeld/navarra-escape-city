@@ -7,20 +7,25 @@ export const enigmas = {
     "missionTitle": "Your Mission",
     "cluesTitle": "Clues & Findings",
     "viewSolutionVideo": "View Solution Video",
+    "checkSolution": "Check Answer",
+    "resetTable": "Reset",
+    "tablePlaceholder": "Type here...",
+    "successTitle": "Correct!",
+    "successMessage": "You have solved the enigma correctly.",
+    "errorTitle": "Incorrect",
+    "errorMessage": "The answer is not correct. Keep trying.",
     "enigma1": {
         "title": "The Chains of Victory",
-        "desc": "Do you know which battle gave origin to the chains of our shield?",
-        "hint": "It happened in 1212.",
-        "intro": "The chains you see on the shield have a history of courage.",
-        "question": "In which battle did Sancho VII the Strong win them?",
-        "solution": "NAVAS DE TOLOSA"
+        "description": "In which famous battle did Sancho VII the Strong break the chains that today form our shield?",
+        "clue1": "It happened in the year 1212.",
+        "clue2": "It was a decisive battle of the Reconquest.",
+        "clue3": "The name starts with N..."
     },
     "enigma2": {
-        "title": "The Seal of Navarre",
-        "desc": "The color of our land is fire and blood.",
-        "hint": "Look at the background of the official shield.",
-        "intro": "Navarre has always been a Kingdom of free kings.",
-        "question": "What is the predominant color of the shield of Navarre?",
-        "solution": "RED"
+        "title": "King Charles III the Noble",
+        "description": "What was the motto of this king, builder of the Palace of Olite, who sought peace?",
+        "clue1": "It is a word in Old French.",
+        "clue2": "It means something like 'Despite everything'.",
+        "clue3": "It starts with U..."
     }
 };

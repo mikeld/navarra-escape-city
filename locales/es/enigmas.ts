@@ -6,20 +6,25 @@ export const enigmas = {
     "missionTitle": "Tu Misión",
     "cluesTitle": "Pistas y Hallazgos",
     "viewSolutionVideo": "Ver Vídeo de la Solución",
+    "checkSolution": "Comprobar Respuesta",
+    "resetTable": "Reiniciar",
+    "tablePlaceholder": "Escribe aquí...",
+    "successTitle": "¡Correcto!",
+    "successMessage": "Has resuelto el enigma correctamente.",
+    "errorTitle": "Incorrecto",
+    "errorMessage": "La respuesta no es correcta. Sigue intentándolo.",
     "enigma1": {
         "title": "Las Cadenas de la Victoria",
-        "desc": "¿Sabes qué batalla dio origen a las cadenas de nuestro escudo?",
-        "hint": "Ocurrió en 1212.",
-        "intro": "Las cadenas que ves en el escudo tienen una historia de valor.",
-        "question": "¿En qué batalla las ganó Sancho VII el Fuerte?",
-        "solution": "NAVAS DE TOLOSA"
+        "description": "¿En qué famosa batalla Sancho VII el Fuerte rompió las cadenas que hoy forman nuestro escudo?",
+        "clue1": "Ocurrió en el año 1212.",
+        "clue2": "Fue una batalla decisiva de la Reconquista.",
+        "clue3": "El nombre empieza por N..."
     },
     "enigma2": {
-        "title": "El Sello de Navarra",
-        "desc": "El color de nuestra tierra es el fuego y la sangre.",
-        "hint": "Mira el fondo del escudo oficial.",
-        "intro": "Navarra siempre ha sido un Reino de reyes libres.",
-        "question": "¿Cuál es el color predominante del escudo de Navarra?",
-        "solution": "ROJO"
+        "title": "El Rey Carlos III el Noble",
+        "description": "¿Cuál era el lema de este rey, constructor del Palacio de Olite, que buscaba la paz?",
+        "clue1": "Es una palabra en francés antiguo.",
+        "clue2": "Significa algo así como 'A pesar de todo'.",
+        "clue3": "Comienza por U..."
     }
 };

@@ -12,7 +12,6 @@ export default {
         ...(common.enigmas || {}),
         ...enigmas
     },
-    // Placeholders o valores por defecto para el resto
     history: {},
     characters: {},
     ega98: {},

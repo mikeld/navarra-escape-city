@@ -7,20 +7,25 @@ export const enigmas = {
     "missionTitle": "Zure Misioa",
     "cluesTitle": "Pistak eta Aurkikuntzak",
     "viewSolutionVideo": "Ikusi Soluzioaren Bideoa",
+    "checkSolution": "Erantzuna Egiaztatu",
+    "resetTable": "Berrezarri",
+    "tablePlaceholder": "Idatzi hemen...",
+    "successTitle": "Zuzena!",
+    "successMessage": "Enigma ondo ebatzi duzu.",
+    "errorTitle": "Okerra",
+    "errorMessage": "Erantzuna ez da zuzena. Saiatu berriro.",
     "enigma1": {
         "title": "Garaipenaren Kateak",
-        "desc": "Ba al dakizu zein guduk eman zien jatorria gure armarriko kateei?",
-        "hint": "1212an gertatu zen.",
-        "intro": "Armarrian ikusten dituzun kateek ausardiazko historia dute.",
-        "question": "Zein gudutan irabazi zituen Antso VII.a Azkarrak?",
-        "solution": "NAVAS DE TOLOSA"
+        "description": "Zein gudu famatutan hautsi zituen Antso VII.a Azkarrak gaur egun gure armarria osatzen duten kateak?",
+        "clue1": "1212. urtean gertatu zen.",
+        "clue2": "Errekonkistako gudu erabakigarria izan zen.",
+        "clue3": "Izena N-z hasten da..."
     },
     "enigma2": {
-        "title": "Nafarroako Zigilua",
-        "desc": "Gure lurraren kolorea sua eta odola da.",
-        "hint": "Begira ezazu armarri ofizialaren atzealdea.",
-        "intro": "Nafarroa errege libreen Erresuma izan da beti.",
-        "question": "Zein da Nafarroako armarriaren kolore nagusia?",
-        "solution": "GORRIA"
+        "title": "Karlos III.a Noblea Erregea",
+        "description": "Zein zen bakea bilatzen zuen errege honen leloa, Erriberriko Jauregiaren eraikitzailea?",
+        "clue1": "Frantses zaharreko hitz bat da.",
+        "clue2": "'Guztiaren gainetik' bezalako zerbait esan nahi du.",
+        "clue3": "U-z hasten da..."
     }
 };

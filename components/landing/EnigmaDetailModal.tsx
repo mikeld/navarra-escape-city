@@ -16,12 +16,15 @@ export const EnigmaDetailModal: React.FC<EnigmaDetailModalProps> = ({ enigma, is
     const { t } = useTranslation();
     const { user } = useAuth();
     const [isSolved, setIsSolved] = useState(false);
+    const [userValue, setUserValue] = useState('');
+    const [feedback, setFeedback] = useState<'success' | 'error' | null>(null);
 
     if (!isOpen) return null;
 
     const handleValidate = async (isCorrect: boolean) => {
         if (isCorrect) {
             setIsSolved(true);
+            setFeedback('success');
             if (user) {
                 try {
                     await markEnigmaCompleted(user.uid, enigma.id);
@@ -29,7 +32,14 @@ export const EnigmaDetailModal: React.FC<EnigmaDetailModalProps> = ({ enigma, is
                     console.error('Error saving enigma progress:', error);
                 }
             }
+        } else {
+            setFeedback('error');
         }
+    };
+
+    const handleInputCheck = () => {
+        const isCorrect = userValue.trim().toLowerCase() === (enigma.correctAnswer as string).toLowerCase();
+        handleValidate(isCorrect);
     };
 
     return (
@@ -117,6 +127,50 @@ export const EnigmaDetailModal: React.FC<EnigmaDetailModalProps> = ({ enigma, is
                                 tableConfig={enigma.table}
                                 onValidate={handleValidate}
                             />
+                        ) : enigma.type === 'INPUT' ? (
+                            <div className="max-w-md mx-auto">
+                                <div className="mb-6">
+                                    <input
+                                        type="text"
+                                        value={userValue}
+                                        onChange={(e) => {
+                                            setUserValue(e.target.value);
+                                            setFeedback(null);
+                                        }}
+                                        disabled={isSolved}
+                                        placeholder={t('enigmas.tablePlaceholder')}
+                                        className={`w-full bg-navarra-dark/50 text-white px-4 py-3 rounded-lg border-2 ${feedback === 'success'
+                                            ? 'border-green-500'
+                                            : feedback === 'error'
+                                                ? 'border-red-500'
+                                                : 'border-navarra-gold/30'
+                                            } focus:outline-none focus:border-navarra-gold transition-all text-center text-lg`}
+                                    />
+                                </div>
+
+                                {feedback && (
+                                    <div className={`mb-6 p-4 rounded-lg text-center font-bold animate-fade-in ${feedback === 'success'
+                                        ? 'bg-green-900/30 border border-green-500 text-green-400'
+                                        : 'bg-red-900/30 border border-red-500 text-red-400'
+                                        }`}>
+                                        {feedback === 'success' ? t('enigmas.successTitle') : t('enigmas.errorTitle')}
+                                        <p className="text-sm font-normal mt-1">
+                                            {feedback === 'success' ? t('enigmas.successMessage') : t('enigmas.errorMessage')}
+                                        </p>
+                                    </div>
+                                )}
+
+                                <button
+                                    onClick={handleInputCheck}
+                                    disabled={isSolved || !userValue.trim()}
+                                    className={`w-full py-3 px-6 rounded-lg font-bold uppercase tracking-wider transition-all duration-300 ${isSolved
+                                        ? 'bg-green-600 text-white opacity-50 cursor-not-allowed'
+                                        : 'bg-navarra-gold hover:bg-navarra-gold/80 text-navarra-dark'
+                                        }`}
+                                >
+                                    {isSolved ? '✓ ' + t('enigmas.successTitle') : t('enigmas.checkSolution')}
+                                </button>
+                            </div>
                         ) : (
                             <div className="text-center text-red-400">Error: Configuration missing</div>
                         )}
